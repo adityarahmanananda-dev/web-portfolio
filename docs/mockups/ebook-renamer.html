@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ebook Renamer — Mockup</title>
+<link rel="stylesheet" href="shared.css">
+<style>:root{--accent:#4338ca}</style>
+</head><body>
+<div class="appbar"><span class="brand">Ebook Renamer</span><span class="pill">Electron App</span><div class="spacer"></div><span class="pill">Folder: ~/Ebooks</span><div class="avatar">ER</div></div>
+<div class="layout">
+  <div class="sidebar">
+    <div class="item on">Scan Folder</div><div class="item">Hasil Pencarian</div>
+    <div class="item sub">Open Library</div><div class="item sub">Google Books</div>
+  </div>
+  <div class="page">
+    <h1>Ebook Renamer</h1>
+    <div class="sub">Ekstrak metadata, cari judul &amp; penulis via Open Library / Google Books — data dummy</div>
+    <div class="toolbar">
+      <button class="btn">📁 Pilih Folder…</button>
+      <button class="btn primary">Scan Folder</button>
+      <button class="btn">🔎 Cari Otomatis</button>
+      <button class="btn">Terapkan Semua Rename</button>
+    </div>
+    <div class="card">
+      <table>
+        <thead><tr><th>File Asli</th><th>Judul Terdeteksi</th><th>Penulis</th><th>Rename →</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td class="mono" style="font-size:11px">book_0451.epub</td><td>Clean Architecture</td><td>Robert C. Martin</td><td class="mono" style="font-size:11px">Clean-Architecture-Robert-C-Martin.epub</td><td><span class="badge good">Matched</span></td></tr>
+          <tr><td class="mono" style="font-size:11px">f122.epub</td><td>Designing Data-Intensive Applications</td><td>Martin Kleppmann</td><td class="mono" style="font-size:11px">Designing-Data-Intensive-Applications-Martin-Kleppmann.epub</td><td><span class="badge good">Matched</span></td></tr>
+          <tr><td class="mono" style="font-size:11px">sample_8870.pdf</td><td>—</td><td>—</td><td class="mono" style="font-size:11px">(manual)</td><td><span class="badge warn">Perlu manual</span></td></tr>
+          <tr><td class="mono" style="font-size:11px">novel_223.epub</td><td>The Pragmatic Programmer</td><td>Andrew Hunt &amp; David Thomas</td><td class="mono" style="font-size:11px">The-Pragmatic-Programmer-Andrew-Hunt-David-Thomas.epub</td><td><span class="badge good">Matched</span></td></tr>
+        </tbody>
+      </table>
+      <div class="toolbar" style="margin-top:12px">
+        <span class="muted" style="font-size:12px">Provider: Open Library (default) · Google Books API opsional</span>
+        <span class="grow"></span><span class="badge gray">3 dari 4 siap rename</span>
+      </div>
+    </div>
+    <div class="footer-note">Mockup UI — data dummy untuk keperluan demo, bukan data riil.</div>
+  </div>
+</div>
+</body></html>

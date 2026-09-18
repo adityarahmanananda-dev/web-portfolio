@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DevBashboard — Mockup</title>
+<link rel="stylesheet" href="shared.css">
+<style>:root{--accent:#d97706}</style>
+</head><body>
+<div class="appbar"><span class="brand">DevBashboard</span><span class="pill">127.0.0.1 · port 7333</span><div class="spacer"></div><span class="pill">13 projects scanned</span><div class="avatar">AR</div></div>
+<div class="layout">
+  <div class="sidebar">
+    <div class="item on">Projects</div><div class="item">Port Usage</div><div class="item">Logs</div>
+    <div class="item sub">Scan folder: C:\Projects</div><div class="item sub">Pengaturan</div>
+  </div>
+  <div class="page">
+    <h1>Projects</h1>
+    <div class="sub">Deteksi stack &amp; database otomatis · port anti-tabrakan · data dummy</div>
+    <div class="grid g3">
+      <div class="card">
+        <div class="row"><h3 style="margin:0">banpem-go</h3><span class="grow"></span><span class="logo-dot"></span><span class="badge good">running</span></div>
+        <div style="margin-top:6px">
+          <span class="tag">Go 1.24</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">pgx</span>
+        </div>
+        <div class="muted mono" style="font-size:11px;margin-top:6px">:8080 · branch main · go run ./cmd/server</div>
+        <div class="toolbar" style="margin-top:8px"><button class="btn sm">Stop</button><button class="btn sm primary">Logs</button><button class="btn sm">🔄 Restart</button></div>
+      </div>
+      <div class="card">
+        <div class="row"><h3 style="margin:0">bku-blud</h3><span class="grow"></span><span class="logo-dot stop"></span><span class="badge gray">stopped</span></div>
+        <div style="margin-top:6px">
+          <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">PostgreSQL</span><span class="tag">Supabase</span>
+        </div>
+        <div class="muted mono" style="font-size:11px;margin-top:6px">:5000 · branch main · flask run</div>
+        <div class="toolbar" style="margin-top:8px"><button class="btn sm primary">Start</button><button class="btn sm">Setup</button></div>
+      </div>
+      <div class="card">
+        <div class="row"><h3 style="margin:0">attendify</h3><span class="grow"></span><span class="logo-dot"></span><span class="badge good">running</span></div>
+        <div style="margin-top:6px">
+          <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">SQLite</span><span class="tag">Playwright</span>
+        </div>
+        <div class="muted mono" style="font-size:11px;margin-top:6px">:5207 · branch main · flask --app app run</div>
+        <div class="toolbar" style="margin-top:8px"><button class="btn sm">Stop</button><button class="btn sm primary">Logs</button></div>
+      </div>
+      <div class="card">
+        <div class="row"><h3 style="margin:0">e-bku</h3><span class="grow"></span><span class="logo-dot stop"></span><span class="badge gray">stopped</span></div>
+        <div style="margin-top:6px">
+          <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">SQLite</span>
+        </div>
+        <div class="muted mono" style="font-size:11px;margin-top:6px">:5001 · branch main · flask run</div>
+        <div class="toolbar" style="margin-top:8px"><button class="btn sm primary">Start</button></div>
+      </div>
+      <div class="card">
+        <div class="row"><h3 style="margin:0">pdf-web-tool</h3><span class="grow"></span><span class="logo-dot stop"></span><span class="badge gray">stopped</span></div>
+        <div style="margin-top:6px">
+          <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">pikepdf</span>
+        </div>
+        <div class="muted mono" style="font-size:11px;margin-top:6px">:5001 · branch main · flask run</div>
+        <div class="toolbar" style="margin-top:8px"><button class="btn sm primary">Start</button></div>
+      </div>
+      <div class="card">
+        <div class="row"><h3 style="margin:0">web-portfolio</h3><span class="grow"></span><span class="logo-dot"></span><span class="badge good">running</span></div>
+        <div style="margin-top:6px">
+          <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Static</span>
+        </div>
+        <div class="muted mono" style="font-size:11px;margin-top:6px">:8090 · branch main · python -m http.server</div>
+        <div class="toolbar" style="margin-top:8px"><button class="btn sm">Stop</button><button class="btn sm primary">Logs</button></div>
+      </div>
+    </div>
+    <div style="height:12px"></div>
+    <div class="card">
+      <h3>Live logs — banpem-go <span class="badge good" style="margin-left:6px">WebSocket</span></h3>
+      <div class="mono" style="background:#0f172a;color:#a5f3fc;border-radius:8px;padding:12px;font-size:11.5px;line-height:1.6">
+        [12:04:11] INFO  server listening on :8080<br>
+        [12:04:12] INFO  connected to PostgreSQL (pool 5)<br>
+        [12:04:30] INFO  POST /api/invoices 201 · 42ms<br>
+        [12:05:02] INFO  POST /api/ledger 200 · 18ms<br>
+        [12:05:41] WARN  slow query 210ms on /api/rekap-pajak
+      </div>
+    </div>
+    <div class="footer-note">Mockup UI — data dummy untuk keperluan demo, bukan data riil.</div>
+  </div>
+</div>
+</body></html>

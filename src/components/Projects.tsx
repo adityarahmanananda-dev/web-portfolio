@@ -3,6 +3,8 @@ import { ExternalLink, Github } from "lucide-react";
 import { projects } from "../data/projects";
 
 export default function Projects() {
+  const base = import.meta.env.BASE_URL;
+
   return (
     <section id="projects">
       <div className="wrap">
@@ -56,9 +58,9 @@ export default function Projects() {
                 flexDirection: "column",
               }}
             >
-              <a href={p.demo} target="_blank" rel="noreferrer" style={{ display: "block" }}>
+              <a href={base + p.demo} target="_blank" rel="noreferrer" style={{ display: "block" }}>
                 <img
-                  src={p.shot}
+                  src={base + p.shot}
                   alt={`${p.title} screenshot`}
                   loading="lazy"
                   style={{
@@ -134,7 +136,7 @@ export default function Projects() {
                     gap: 8,
                   }}
                 >
-                  <a href={p.demo} target="_blank" rel="noreferrer" className="btn sm">
+                  <a href={base + p.demo} target="_blank" rel="noreferrer" className="btn sm">
                     <ExternalLink size={14} /> Live Demo
                   </a>
                   <a href={p.github} target="_blank" rel="noreferrer" className="btn sm">

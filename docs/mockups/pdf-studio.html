@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PDF Studio — Mockup</title>
+<link rel="stylesheet" href="shared.css">
+<style>:root{--accent:#b45309}</style>
+</head><body>
+<div class="appbar"><span class="brand">PDF Studio</span><span class="pill">Local processing — 127.0.0.1</span><div class="spacer"></div><span class="pill">File tidak dikirim ke server</span><div class="avatar">AR</div></div>
+<div class="layout">
+  <div class="sidebar">
+    <div class="item on">Files</div><div class="item">Merge</div><div class="item">Hasil</div>
+    <div class="item sub">JPG → PDF</div><div class="item sub">PDF → JPG</div><div class="item sub">Compress</div>
+  </div>
+  <div class="page">
+    <h1>PDF &amp; Gambar</h1>
+    <div class="sub">Rotate, extract, compress, merge — semua proses berjalan di komputer Anda — data dummy</div>
+    <div class="toolbar">
+      <button class="btn primary">+ Upload File</button>
+      <button class="btn">⚙️ Proses File</button>
+      <button class="btn">🔀 Merge Hasil PDF</button>
+      <span class="grow"></span><span class="badge gray">5 file</span>
+    </div>
+    <div class="card">
+      <table>
+        <thead><tr><th>File</th><th>Ukuran</th><th>Aksi</th><th>Parameter</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><b>laporan-keuangan.pdf</b></td><td>2,4 MB</td>
+            <td><span class="badge blue">Rotate 90°</span></td><td class="mono">halaman 1-10</td><td><span class="badge good">Siap</span></td>
+          </tr>
+          <tr>
+            <td><b>surat-tugas.pdf</b></td><td>840 KB</td>
+            <td><span class="badge blue">Extract</span></td><td class="mono">5,1,3-6</td><td><span class="badge good">Siap</span></td>
+          </tr>
+          <tr>
+            <td><b>scan-kwitansi.pdf</b></td><td>11,2 MB</td>
+            <td><span class="badge blue">Compress</span></td><td class="mono">screen · ebook · printer</td><td><span class="badge warn">Belum diproses</span></td>
+          </tr>
+          <tr>
+            <td><b>foto-acara.png</b></td><td>3,1 MB</td>
+            <td><span class="badge blue">PNG → JPG</span></td><td class="mono">quality 85</td><td><span class="badge good">Siap</span></td>
+          </tr>
+          <tr>
+            <td><b>dokumen.jpg</b></td><td>1,6 MB</td>
+            <td><span class="badge blue">Gambar → PDF</span></td><td class="mono">ikut merge</td><td><span class="badge good">Siap</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="margin-top:12px" class="muted" style="font-size:12px">
+        Ghostscript (compress) &amp; Poppler (PDF→JPG) dideteksi otomatis · sesi tersimpan saat refresh
+      </div>
+    </div>
+    <div class="footer-note">Mockup UI — data dummy untuk keperluan demo, bukan data riil.</div>
+  </div>
+</div>
+</body></html>

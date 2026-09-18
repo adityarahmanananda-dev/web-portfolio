@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4Notes — Mockup</title>
+<link rel="stylesheet" href="shared.css">
+<style>:root{--accent:#059669}</style>
+</head><body>
+<div class="appbar"><span class="brand">4Notes</span><span class="pill">Cornell · QEC · Mindmap · Outline</span><div class="spacer"></div><span class="badge" style="background:#fff;color:#059669">Tersimpan</span></div>
+<div class="layout">
+  <div class="sidebar">
+    <div class="item" style="font-weight:700">📚 Notebook</div>
+    <div class="item on">CS50</div><div class="item">DSA</div><div class="item">System Design</div>
+    <div class="item sub">+ Notebook Baru</div><div class="item" style="font-weight:700;margin-top:8px">📝 Catatan</div>
+    <div class="item">Week 0 — Scratch</div><div class="item on">Week 1 — C</div><div class="item">Week 2 — Arrays</div>
+    <div class="item sub">+ Catatan Baru</div>
+  </div>
+  <div class="page">
+    <h1>Week 1 — C (Cornell + Mindmap)</h1>
+    <div class="sub">Tambah blok: Cornell · QEC · Mindmap · Outline — data dummy</div>
+    <div class="grid g3" style="grid-template-columns:1fr 1fr 1fr">
+      <div class="card">
+        <h3>Cornell — Petunjuk / Pertanyaan</h3>
+        <div style="border-left:3px solid #059669;padding-left:10px;color:#374151">
+          Apa itu compiled language?<br><br>
+          Perbedaan stack vs heap?<br><br>
+          Kenapa pointer penting?
+        </div>
+      </div>
+      <div class="card">
+        <h3>Cornell — Catatan</h3>
+        <div class="muted">• C adalah compiled language (source → binary via compiler)<br>• Stack: LIFO, otomatis; Heap: manual (malloc/free)<br>• Pointer menyimpan alamat memori<br>• Array adalah pointer ke elemen pertama<br>• String = char[] diakhiri '\0'</div>
+      </div>
+      <div class="card">
+        <h3>Cornell — Ringkasan</h3>
+        <div class="muted">Memahami model memori (stack/heap) dan pointer adalah fondasi untuk data structures &amp; CS50 problem sets.</div>
+      </div>
+    </div>
+    <div style="height:12px"></div>
+    <div class="card">
+      <h3>Mindmap — Memory Model</h3>
+      <div class="muted" style="font-family:Consolas,monospace;font-size:12.5px;line-height:1.8">
+        Memory Model<br>
+        ├─ Text (code)<br>
+        ├─ Data (globals/static)<br>
+        ├─ Heap (↑ alokasi dinamis — malloc/free)<br>
+        │  └─ pointer management<br>
+        └─ Stack (↓ frame fungsi / variabel lokal)
+      </div>
+    </div>
+    <div class="footer-note">Mockup UI — data dummy untuk keperluan demo, bukan data riil.</div>
+  </div>
+</div>
+</body></html>
