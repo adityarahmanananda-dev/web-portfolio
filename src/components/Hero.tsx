@@ -40,7 +40,6 @@ function useTypewriter(words: string[]) {
 
 export default function Hero() {
   const typed = useTypewriter(roles);
-  const base = import.meta.env.BASE_URL;
 
   return (
     <header
@@ -100,9 +99,6 @@ export default function Hero() {
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 26 }}>
             <a href="#projects" className="btn primary">
               View Projects <ArrowRight size={16} />
-            </a>
-            <a href={base + "CV-Aditya-Rahman-Ananda.pdf"} className="btn ghost" download>
-              Download CV
             </a>
             <a href="#contact" className="btn ghost">
               Contact Me
