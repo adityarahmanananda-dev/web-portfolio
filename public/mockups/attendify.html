@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Attendify — Mockup</title>
+<link rel="stylesheet" href="shared.css">
+<style>:root{--accent:#be185d}</style>
+</head><body>
+<div class="appbar"><span class="brand">Attendify</span><span class="pill">Rekap Absensi ASN</span><div class="spacer"></div><span class="pill">Periode: Jan–Jul 2026</span><div class="avatar">AR</div></div>
+<div class="layout">
+  <div class="sidebar">
+    <div class="item on">Rekap Pegawai</div><div class="item">Detail Harian</div><div class="item">Klarifikasi Absen</div>
+    <div class="item">Tarik Data</div><div class="item sub">Export Excel / PDF</div><div class="item sub">Backup Database</div>
+  </div>
+  <div class="page">
+    <h1>Rekap Absensi</h1>
+    <div class="sub">Data ditarik &amp; direkap otomatis dari sistem e-absensi — data dummy</div>
+    <div class="toolbar">
+      <div class="input">Cari pegawai / NRK…</div>
+      <button class="btn">Semua Status</button>
+      <button class="btn primary">+ Tarik Data</button>
+      <button class="btn">Export Excel</button><button class="btn">Export PDF</button>
+    </div>
+    <div class="card">
+      <table>
+        <thead><tr><th>Nama / NRK</th><th>Hari Kerja</th><th>Hadir</th><th>Alpa</th><th>Terlambat</th><th>Pulang Awal</th><th>Lembur</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td><b>Bambang S.</b><br><span class="muted mono">215356</span></td><td>104</td><td>98</td><td>0</td><td>2</td><td>1</td><td>14</td><td><span class="badge good">Tuntas</span></td></tr>
+          <tr><td><b>Dewi A.</b><br><span class="muted mono">215401</span></td><td>104</td><td>102</td><td>0</td><td>0</td><td>0</td><td>9</td><td><span class="badge good">Tuntas</span></td></tr>
+          <tr><td><b>Fajar N.</b><br><span class="muted mono">215470</span></td><td>104</td><td>88</td><td>3</td><td>6</td><td>2</td><td>5</td><td><span class="badge bad">Perlu klarifikasi</span></td></tr>
+          <tr><td><b>Gita P.</b><br><span class="muted mono">215512</span></td><td>104</td><td>99</td><td>0</td><td>1</td><td>1</td><td>11</td><td><span class="badge good">Tuntas</span></td></tr>
+          <tr><td><b>Hendra W.</b><br><span class="muted mono">215588</span></td><td>104</td><td>80</td><td>6</td><td>4</td><td>3</td><td>2</td><td><span class="badge bad">Perlu klarifikasi</span></td></tr>
+          <tr><td><b>Indra K.</b><br><span class="muted mono">215634</span></td><td>104</td><td>101</td><td>0</td><td>2</td><td>0</td><td>7</td><td><span class="badge good">Tuntas</span></td></tr>
+        </tbody>
+      </table>
+      <div class="toolbar" style="margin-top:12px">
+        <span class="muted" style="font-size:12px">Klarifikasi otomatis jika alpa &gt; 0 atau terlambat/pulang-awal ≥ 3 jam 45 menit</span>
+        <span class="grow"></span><button class="btn sm primary">Kelola Klarifikasi</button>
+      </div>
+    </div>
+    <div class="footer-note">Mockup UI — data dummy untuk keperluan demo, bukan data riil.</div>
+  </div>
+</div>
+</body></html>

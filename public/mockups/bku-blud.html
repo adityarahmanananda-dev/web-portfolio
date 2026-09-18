@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>e-BKU BLUD — Mockup</title>
+<link rel="stylesheet" href="shared.css">
+<style>:root{--accent:#7c3aed}</style>
+</head><body>
+<div class="appbar"><span class="brand">e-BKU BLUD</span><span class="pill">Buku Kas Umum BLUD</span><div class="spacer"></div><span class="pill">SMK Negeri 26 Jakarta</span><div class="avatar">AR</div></div>
+<div class="layout">
+  <div class="sidebar">
+    <div class="item on">Dashboard</div><div class="item">Tagihan</div><div class="item">Setor Pajak</div>
+    <div class="item">Jasa Giro</div><div class="item">Posisi Kas</div><div class="item">Penyedia</div>
+    <div class="item sub">Pengaturan Profil</div><div class="item sub">Export Laporan</div>
+  </div>
+  <div class="page">
+    <h1>Dashboard — Posisi Kas</h1>
+    <div class="sub">Rekonsiliasi posisi kas bulanan — data dummy</div>
+    <div class="grid g4">
+      <div class="card stat"><div class="lbl">Saldo Awal BKU</div><div class="num">Rp 96.300.000</div><div class="hint">Juli 2026</div></div>
+      <div class="card stat"><div class="lbl">Saldo Bank (DKI)</div><div class="num">Rp 112.540.000</div><div class="hint">3 rekening</div></div>
+      <div class="card stat"><div class="lbl">Setoran Dalam Perjalanan</div><div class="num">Rp 4.800.000</div><div class="hint">SIP</div></div>
+      <div class="card stat"><div class="lbl">Selisih Kas</div><div class="num">Rp 0</div><div class="hint">seimbang ✓</div></div>
+    </div>
+    <div style="height:12px"></div>
+    <div class="card">
+      <h3>Tagihan — Perhitungan Pajak Otomatis (PPN 12%, PPh 21/22/23)</h3>
+      <table>
+        <thead><tr><th>No. Bukti</th><th>Tanggal</th><th>Uraian</th><th>Bruto</th><th>DPP</th><th>PPN</th><th>PPh</th><th>Netto</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>T-102</td><td>02-07-2026</td><td>Belanja alat praktik</td><td class="mono">8.880.000</td><td class="mono">8.000.000</td><td class="mono">880.000</td><td class="mono">120.000</td><td class="mono">7.880.000</td><td><span class="badge good">Lunas</span></td></tr>
+          <tr><td>T-103</td><td>05-07-2026</td><td>Honor tenaga ahli (Gol IV)</td><td class="mono">3.200.000</td><td class="mono">3.200.000</td><td class="mono">0</td><td class="mono">480.000</td><td class="mono">2.720.000</td><td><span class="badge blue">Menunggu setor</span></td></tr>
+          <tr><td>T-104</td><td>09-07-2026</td><td>Jasa perawatan AC</td><td class="mono">5.500.000</td><td class="mono">5.500.000</td><td class="mono">0</td><td class="mono">110.000</td><td class="mono">5.390.000</td><td><span class="badge good">Lunas</span></td></tr>
+          <tr><td>T-105</td><td>12-07-2026</td><td>Transport narasumber (tanpa pajak)</td><td class="mono">1.200.000</td><td class="mono">1.200.000</td><td class="mono">0</td><td class="mono">0</td><td class="mono">1.200.000</td><td><span class="badge good">Lunas</span></td></tr>
+        </tbody>
+      </table>
+      <div class="toolbar" style="margin-top:12px">
+        <button class="btn primary">+ Input Tagihan</button>
+        <button class="btn">Export Excel</button><button class="btn">Export PDF</button>
+        <span class="grow"></span><span class="badge gray">Form 22 · Form 23 · Form 25</span>
+      </div>
+    </div>
+    <div class="footer-note">Mockup UI — data dummy untuk keperluan demo, bukan data riil.</div>
+  </div>
+</div>
+</body></html>

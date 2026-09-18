@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>e-BKU — Mockup</title>
+<link rel="stylesheet" href="shared.css">
+<style>:root{--accent:#0369a1}</style>
+</head><body>
+<div class="appbar"><span class="brand">e-BKU</span><span class="pill">Elektronik Buku Kas Umum</span><div class="spacer"></div><div class="pill">Real</div><div class="pill">Rencana 100%</div><div class="avatar">AR</div></div>
+<div class="layout">
+  <div class="sidebar">
+    <div class="item on">Dashboard</div><div class="item">Bantuan</div><div class="item">Tagihan</div>
+    <div class="item">BKU</div><div class="item">Buku Kas Bank</div><div class="item">Setor Pajak</div>
+    <div class="item">Rekap Pajak</div><div class="item">Rekap Belanja</div><div class="item">Pencairan</div>
+  </div>
+  <div class="page">
+    <h1>Dashboard — Program Bantuan</h1>
+    <div class="sub">Kelola beberapa program bantuan, masing-masing dengan BKU &amp; pajak sendiri — data dummy</div>
+    <div class="grid g3">
+      <div class="card">
+        <h3>Bantuan Operasional Sekolah</h3>
+        <div class="muted" style="font-size:12px">Bank DKI · 501-727-00963</div>
+        <div class="stat" style="margin-top:8px"><div class="lbl">Nominal</div><div class="num">Rp 280.000.000</div></div>
+        <div class="row" style="margin-top:8px"><span class="badge blue">Tahap 1 · 70%</span><span class="badge gray">Saldo Rp 96 jt</span></div>
+      </div>
+      <div class="card">
+        <h3>Hibah Sarana Lab</h3>
+        <div class="muted" style="font-size:12px">Bank DKI · 501-427-01015</div>
+        <div class="stat" style="margin-top:8px"><div class="lbl">Nominal</div><div class="num">Rp 145.000.000</div></div>
+        <div class="row" style="margin-top:8px"><span class="badge good">100%</span><span class="badge gray">Saldo Rp 12 jt</span></div>
+      </div>
+      <div class="card">
+        <h3>Dana Bantuan SPP</h3>
+        <div class="muted" style="font-size:12px">Bank DKI · 501-527-01191</div>
+        <div class="stat" style="margin-top:8px"><div class="lbl">Nominal</div><div class="num">Rp 98.000.000</div></div>
+        <div class="row" style="margin-top:8px"><span class="badge warn">30%</span><span class="badge gray">Saldo Rp 68 jt</span></div>
+      </div>
+    </div>
+    <div style="height:12px"></div>
+    <div class="card">
+      <h3>Buku Kas Umum — Bantuan Operasional Sekolah <span class="badge gray" style="margin-left:6px">Versi: Real</span></h3>
+      <table>
+        <thead><tr><th>No</th><th>Tanggal</th><th>Uraian</th><th>Debet</th><th>Kredit</th><th>Saldo</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>01-08-2026</td><td>Saldo awal</td><td>—</td><td>—</td><td class="mono">196.000.000</td></tr>
+          <tr><td>2</td><td>06-08-2026</td><td>Pembayaran invoice INV-021 (Bruto)</td><td class="mono">9.990.000</td><td>—</td><td class="mono">186.010.000</td></tr>
+          <tr><td>3</td><td>06-08-2026</td><td>Pungut PPN</td><td>—</td><td class="mono">990.000</td><td class="mono">185.020.000</td></tr>
+          <tr><td>4</td><td>06-08-2026</td><td>Pungut PPh 23 (2%)</td><td>—</td><td class="mono">180.000</td><td class="mono">184.840.000</td></tr>
+          <tr><td>5</td><td>13-08-2026</td><td>Setor pajak (NTB/NTPN)</td><td class="mono">1.170.000</td><td>—</td><td class="mono">183.670.000</td></tr>
+          <tr><td>6</td><td>13-08-2026</td><td>Jasa giro</td><td>—</td><td class="mono">410.000</td><td class="mono">184.080.000</td></tr>
+        </tbody>
+      </table>
+      <div class="toolbar" style="margin-top:12px">
+        <button class="btn primary">+ Tambah BKU Manual</button>
+        <button class="btn">Export Excel</button><button class="btn">Export PDF</button><button class="btn">Export Word</button>
+      </div>
+    </div>
+    <div class="footer-note">Mockup UI — data dummy untuk keperluan demo, bukan data riil.</div>
+  </div>
+</div>
+</body></html>
