@@ -21,7 +21,7 @@ export const projects: Project[] = [
       "Web application for administering government grant funds (e-BKU) at SMK Negeri 26 Jakarta — grant accounts, phased disbursement, invoices, and official financial reports.",
     how: "Go monolith with server-rendered templates, integer-based money arithmetic, and a custom tax engine (PPN/PPh, ROUND_HALF_EVEN).",
     impact:
-      "Replaced manual spreadsheet bookkeeping, eliminated tax-calculation errors, and standardized auditor-ready reports — shipped as one containerized binary.",
+      "Replaced manual spreadsheet bookkeeping for a school's grant-finance office — 8 official report types in Excel/PDF/Word, 24 server-rendered templates, and a tax engine guarded by mandatory unit-test vectors.",
     stack: ["Go", "PostgreSQL", "Docker", "net/http", "Excelize", "OOXML/PDF"],
     shot: "shots/banpem-go.png",
     demo: "mockups/banpem-go.html",
@@ -51,7 +51,7 @@ export const projects: Project[] = [
       "Multi-program grant-fund management with automated ledger logic, Real vs. 100%-plan reporting, and Excel/PDF/Word exports.",
     how: "Flask + SQLite (13-table schema), banker's-rounding math, and invoice-driven ledger generation.",
     impact:
-      "Gave finance operators a self-service cash-book tool and cut reporting turnaround.",
+      "Gave finance operators a self-service cash-book tool across multiple grant programs — 13-table schema, 65 routes, 23 templates, and automatic backups with 10-file retention.",
     stack: ["Python", "Flask", "SQLite", "openpyxl", "fpdf2", "python-docx"],
     shot: "shots/ebku.png",
     demo: "mockups/ebku.html",
@@ -66,7 +66,7 @@ export const projects: Project[] = [
       "Local dashboard that scans project folders, auto-detects stack & database, allocates collision-free ports, and starts/stops native + Docker apps with live logs.",
     how: "Node.js + Express + WebSocket; stack/DB detection and Docker Compose orchestration with process-group lifecycle control.",
     impact:
-      "Runs a 13+ project portfolio from one screen — no port clashes or manual startup scripts.",
+      "Runs a 13+ project portfolio from one screen across 5+ detected stacks — collision-free ports (20000–65535) and no manual startup scripts.",
     stack: ["Node.js", "Express", "WebSocket", "Docker Compose", "JavaScript"],
     shot: "shots/devbashboard.png",
     demo: "mockups/devbashboard.html",
@@ -81,7 +81,7 @@ export const projects: Project[] = [
       "Scrapes and aggregates attendance data from BKD DKI Jakarta's e-attendance system into recaps, with an absence-clarification workflow.",
     how: "Flask + Playwright drives a real Chrome session to capture login; parses HTML into SQLite and exports Excel/PDF.",
     impact:
-      "Replaced manual Excel consolidation and made attendance recap repeatable and auditable.",
+      "Replaced manual Excel consolidation for ASN attendance recaps — 16 status codes and automatic clarification flags (alpa > 0 or ≥ 3h45m late / early leave).",
     stack: ["Python", "Flask", "Playwright", "SQLite", "openpyxl", "ReportLab"],
     shot: "shots/attendify.png",
     demo: "mockups/attendify.html",

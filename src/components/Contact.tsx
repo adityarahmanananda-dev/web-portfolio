@@ -23,6 +23,8 @@ const items = [
 ];
 
 export default function Contact() {
+  const base = import.meta.env.BASE_URL;
+
   return (
     <section id="contact">
       <div className="wrap">
@@ -38,6 +40,11 @@ export default function Contact() {
           Looking for a backend engineer who can build reliable systems and ship impact?
           Let&apos;s talk.
         </p>
+        <div style={{ marginBottom: 24 }}>
+          <a href={base + "CV-Aditya-Rahman-Ananda.pdf"} className="btn primary" download>
+            Download CV (PDF)
+          </a>
+        </div>
         <div
           style={{
             display: "grid",
