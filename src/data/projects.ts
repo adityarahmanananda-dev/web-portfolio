@@ -78,7 +78,7 @@ export const projects: Project[] = [
     title: "Attendify",
     subtitle: "ASN Attendance Scraper & Rekap · Python",
     description:
-      "Scrapes and aggregates attendance data from BKD DKI Jakarta's e-attendance system into recaps, with an absence-clarification workflow.",
+      "Scrapes and aggregates attendance data from a government agency's e-attendance system into recaps, with an absence-clarification workflow.",
     how: "Flask + Playwright drives a real Chrome session to capture login; parses HTML into SQLite and exports Excel/PDF.",
     impact:
       "Replaced manual Excel consolidation for ASN attendance recaps — 16 status codes and automatic clarification flags (alpa > 0 or ≥ 3h45m late / early leave).",
