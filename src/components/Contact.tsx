@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Mail, MapPin, Phone } from "lucide-react";
+import { Github, Mail, MapPin } from "lucide-react";
 
 const items = [
   {
@@ -7,12 +7,6 @@ const items = [
     label: "Email",
     value: "adityard01.dev@gmail.com",
     href: "mailto:adityard01.dev@gmail.com",
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+62 822 4467 4063",
-    href: "tel:+6282244674063",
   },
   {
     icon: Github,
