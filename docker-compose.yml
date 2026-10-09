@@ -1,5 +1,6 @@
 services:
   web:
+    restart: unless-stopped
     build: .
     ports:
       - "127.0.0.1:8057:80"
