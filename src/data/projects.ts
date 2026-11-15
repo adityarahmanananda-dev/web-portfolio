@@ -7,12 +7,28 @@ export interface Project {
   impact: string;
   stack: string[];
   shot: string;
-  demo: string;
-  github: string;
+  demo?: string;
+  github?: string;
+  isPrivate?: boolean;
   accent: string;
 }
 
 export const projects: Project[] = [
+  {
+    id: "book-o-worm",
+    title: "Book-O-Worm",
+    subtitle: "Personal Book Catalog · Android",
+    description:
+      "Native Android catalog for photographing books, scanning ISBN barcodes, auto-filling metadata from Open Library, and opening PDF/EPUB files in your preferred reader.",
+    how: "Kotlin + Jetpack Compose with Room, on-device ML Kit barcode/OCR, Open Library via Retrofit, Coil covers, and a private ZIP backup/restore format.",
+    impact:
+      "Turns a phone's photo library into a searchable shelf — bilingual UI, multi-category filters, duplicate-ISBN checks, filtered CSV exports, and one-tap offline backup.",
+    stack: ["Kotlin", "Jetpack Compose", "Room", "ML Kit", "Open Library", "Coil"],
+    shot: "shots/book-o-worm.png",
+    demo: "mockups/book-o-worm.html",
+    isPrivate: true,
+    accent: "#7a4e2d",
+  },
   {
     id: "banpem-go",
     title: "Banpem-GO",

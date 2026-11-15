@@ -9,7 +9,7 @@ An interactive, single-page portfolio for **Aditya Rahman Ananda** — Backend S
 - Typewriter hero with rotating roles
 - Dark / light theme toggle (persisted to localStorage)
 - Animated reveals and skill bars (Framer Motion)
-- Project cards with UI screenshots, "what it does", "Built", "Impact", tech stack, **Live Demo** (open-source mockups with dummy data) and **Source** links
+- Project cards with UI screenshots, "what it does", "Built", "Impact", tech stack, **Live Demo** (open-source mockups with dummy data), and **Source** links where public; private projects show a **Private source** badge.
 - About, Skills (5 groups), and Contact sections
 - Fully responsive with a mobile menu
 

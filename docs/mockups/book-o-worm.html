@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book-O-Worm — Android App Mockup</title>
+  <style>
+    :root {
+      --brown: #3e2c23;
+      --brown-2: #7a4e2d;
+      --cream: #fffbf5;
+      --paper: #f8f0e5;
+      --line: #e4d6c6;
+      --muted: #746354;
+      --amber: #d99a45;
+      --sage: #dce8ce;
+      --ink: #2b2520;
+      --good: #4f6350;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { min-height: 100%; }
+    body {
+      background: #1b1511;
+      font-family: "Segoe UI", Inter, Arial, sans-serif;
+      color: var(--ink);
+      display: grid;
+      place-items: center;
+      padding: 0;
+    }
+    .poster {
+      position: relative;
+      width: 1280px;
+      height: 900px;
+      overflow: hidden;
+      display: flex;
+      background:
+        radial-gradient(circle at 77% 38%, rgba(226, 170, 93, 0.24), transparent 32%),
+        radial-gradient(circle at 14% 85%, rgba(79, 99, 80, 0.20), transparent 34%),
+        linear-gradient(135deg, #fffdf8 0%, #fff8ee 45%, #f6ebdc 100%);
+    }
+    .poster::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(62, 44, 35, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(62, 44, 35, 0.035) 1px, transparent 1px);
+      background-size: 34px 34px;
+      mask-image: linear-gradient(90deg, #000 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .copy {
+      position: relative;
+      z-index: 2;
+      width: 600px;
+      padding: 82px 0 64px 72px;
+      display: flex;
+      flex-direction: column;
+    }
+    .eyebrow {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 8px;
+      color: var(--brown-2);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      padding: 7px 12px;
+      border: 1px solid rgba(122, 78, 45, 0.24);
+      border-radius: 999px;
+      background: rgba(255, 251, 245, 0.7);
+      margin-bottom: 28px;
+    }
+    .eyebrow i { width: 6px; height: 6px; border-radius: 50%; background: var(--amber); }
+    .brand { display: flex; align-items: center; gap: 18px; margin-bottom: 18px; }
+    .mark {
+      width: 68px; height: 68px; border-radius: 19px;
+      background: var(--brown);
+      display: grid; place-items: center;
+      box-shadow: 0 12px 26px rgba(62, 44, 35, 0.22);
+      flex-shrink: 0;
+    }
+    .mark svg { width: 52px; height: 52px; }
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 54px;
+      line-height: 0.95;
+      letter-spacing: -1.8px;
+      color: var(--brown);
+    }
+    .lead {
+      font-size: 16px;
+      line-height: 1.55;
+      color: #5d4b3d;
+      max-width: 470px;
+      margin: 4px 0 26px;
+    }
+    .features { list-style: none; display: grid; gap: 11px; width: 470px; margin-bottom: 26px; }
+    .features li { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; line-height: 1.35; color: #473729; }
+    .tick {
+      width: 18px; height: 18px; flex: 0 0 18px; border-radius: 50%;
+      display: grid; place-items: center; margin-top: 1px;
+      background: var(--sage); color: #415437; font-size: 11px; font-weight: 900;
+    }
+    .stack { display: flex; flex-wrap: wrap; gap: 7px; max-width: 490px; }
+    .stack span {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2px;
+      color: var(--brown-2);
+      background: rgba(255, 251, 245, 0.8);
+      border: 1px solid rgba(122, 78, 45, 0.18);
+      padding: 5px 9px; border-radius: 7px;
+    }
+    .footnote {
+      margin-top: auto; display: flex; align-items: center; gap: 8px;
+      color: #9a8776; font-size: 10.5px; font-weight: 600; letter-spacing: 0.3px;
+    }
+    .footnote b { color: var(--brown-2); }
+    .devices { position: absolute; inset: 0 0 0 600px; z-index: 1; }
+    .glow {
+      position: absolute; width: 440px; height: 440px; border-radius: 50%;
+      background: rgba(217, 154, 69, 0.18);
+      filter: blur(28px);
+      top: 180px; left: 130px;
+    }
+    .phone {
+      position: absolute;
+      background: #1a1410;
+      border: 9px solid #241b15;
+      border-radius: 38px;
+      box-shadow: 0 35px 70px rgba(36, 27, 21, 0.32), inset 0 0 0 1px rgba(255,255,255,0.06);
+      overflow: hidden;
+    }
+    .phone.front { width: 306px; height: 646px; right: 80px; top: 122px; z-index: 3; transform: rotate(1.8deg); }
+    .phone.back { width: 272px; height: 574px; right: 340px; top: 190px; z-index: 2; transform: rotate(-5deg); opacity: 0.98; }
+    .screen { height: 100%; position: relative; background: var(--cream); overflow: hidden; }
+    .status {
+      height: 28px; padding: 8px 17px 0; display: flex; justify-content: space-between;
+      color: #6a594a; font-size: 9px; font-weight: 700;
+    }
+    .status .dots { display: flex; gap: 4px; align-items: center; }
+    .status .dots i { width: 3px; height: 3px; border-radius: 50%; background: #8b7662; }
+    .status .battery { width: 14px; height: 7px; border: 1px solid #8b7662; border-radius: 2px; position: relative; }
+    .status .battery::after { content: ""; position: absolute; right: -3px; top: 2px; width: 2px; height: 3px; background: #8b7662; border-radius: 0 1px 1px 0; }
+    .appbar { padding: 10px 15px 2px; display: flex; align-items: center; gap: 8px; }
+    .appbar .logo { width: 22px; height: 22px; border-radius: 7px; background: var(--brown); display: grid; place-items: center; }
+    .appbar .logo svg { width: 18px; height: 18px; }
+    .appbar .name { font-family: Georgia, serif; font-size: 15px; font-weight: 700; color: var(--brown); }
+    .appbar .icons { margin-left: auto; color: #756252; font-size: 12px; letter-spacing: 2px; }
+    .search {
+      margin: 8px 15px 0; height: 36px; border-radius: 11px;
+      border: 1px solid var(--line); background: #f6e9da;
+      display: flex; align-items: center; gap: 7px; padding: 0 10px;
+      color: #85705d; font-size: 10px;
+    }
+    .search .lens { font-size: 12px; color: #6d5949; }
+    .chips { display: flex; gap: 6px; padding: 10px 15px 7px; overflow: hidden; }
+    .chip {
+      flex: 0 0 auto; font-size: 8.5px; font-weight: 700; color: #5e4d3f;
+      border: 1px solid var(--line); border-radius: 999px; padding: 4px 8px;
+      background: rgba(255,255,255,0.6);
+    }
+    .chip.on { background: var(--sage); border-color: transparent; color: #3f4f35; }
+    .count { padding: 0 15px 7px; font-size: 8px; color: #9a8675; }
+    .book {
+      margin: 0 15px 8px; border: 1px solid #e8dbcc; border-radius: 13px;
+      background: #fffdf9; padding: 9px; box-shadow: 0 3px 10px rgba(80, 59, 42, 0.04);
+    }
+    .book .top { display: flex; gap: 9px; }
+    .cover {
+      width: 44px; height: 62px; border-radius: 5px; flex: 0 0 44px;
+      display: grid; place-items: center; font-family: Georgia, serif;
+      font-size: 21px; color: #72543b; position: relative; overflow: hidden;
+    }
+    .cover.a { background: linear-gradient(145deg, #f4dfc5, #dce8ce); }
+    .cover.b { background: linear-gradient(145deg, #cfe5f2, #8fbfdc); color: #2f566c; }
+    .cover::after { content: ""; position: absolute; inset: 0; background: linear-gradient(120deg, rgba(255,255,255,0.3), transparent 55%); }
+    .meta { flex: 1; min-width: 0; }
+    .meta .rowline { display: flex; align-items: center; gap: 3px; margin-bottom: 2px; font-size: 7.2px; line-height: 1.2; }
+    .meta .lbl { color: #9a8775; width: 36px; flex: 0 0 36px; }
+    .meta .val { color: #3e3026; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .meta .val.big { font-size: 8.4px; }
+    .actions { display: flex; gap: 4px; margin-top: 6px; }
+    .actions span { flex: 1; text-align: center; font-size: 7px; font-weight: 700; color: var(--brown-2); border: 1px solid #dfcbb5; border-radius: 5px; padding: 4px 0; }
+    .actions span.del { color: #b34b42; border-color: #e6b8b4; }
+    .open {
+      width: 100%; margin-top: 6px; border: 0; border-radius: 6px; padding: 6px 0;
+      background: var(--brown-2); color: #fff; font-size: 8px; font-weight: 700;
+      font-family: inherit;
+    }
+    .open.muted { background: #e9dfd3; color: #aa998a; }
+    .fab {
+      position: absolute; right: 13px; bottom: 14px; background: var(--brown-2);
+      color: #fff; border-radius: 11px; padding: 8px 11px; font-size: 8px; font-weight: 700;
+      box-shadow: 0 8px 16px rgba(93, 62, 38, 0.25);
+    }
+    .back .screen { background: #fffaf3; }
+    .formbar { height: 27px; padding: 7px 12px 0; display: flex; align-items: center; gap: 6px; color: #6d5949; font-size: 10px; font-weight: 700; }
+    .formbar .arrow { font-size: 13px; }
+    .form { padding: 7px 12px 0; }
+    .form h2 { font-size: 10px; color: #6d5949; font-weight: 800; margin: 7px 0 5px; }
+    .photo-row { display: flex; gap: 5px; }
+    .photo-box { flex: 1; height: 44px; border: 1px dashed #d9c6b2; border-radius: 5px; background: #f8eedf; display: grid; place-items: center; color: #a58f7b; font-size: 6.5px; }
+    .field { height: 21px; border: 1px solid #e1d2c0; border-radius: 5px; padding: 5px 6px 0; font-size: 7px; color: #9c8876; margin-bottom: 4px; background: #fffdfa; }
+    .field-row { display: flex; gap: 5px; }
+    .field-row .field { flex: 1; }
+    .isbn-row { display: flex; gap: 4px; }
+    .isbn-row .field { flex: 1; margin-bottom: 0; }
+    .searchbtn { width: 48px; border: 0; border-radius: 5px; background: var(--sage); color: #405034; font-size: 7px; font-weight: 800; font-family: inherit; }
+    .save {
+      position: absolute; left: 12px; right: 12px; bottom: 12px; border: 0; border-radius: 8px;
+      background: var(--brown-2); color: #fff; padding: 8px 0; font-size: 8px; font-weight: 700; font-family: inherit;
+    }
+    .back-label { position: absolute; top: 35px; left: 285px; color: rgba(255,255,255,0.6); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; }
+    @media (max-width: 1100px) {
+      body { padding: 20px; }
+      .poster { width: 100%; height: auto; min-height: 900px; flex-direction: column; }
+      .copy { width: 100%; padding: 50px 40px 20px; }
+      .devices { position: relative; inset: auto; height: 760px; width: 100%; margin-top: 10px; }
+      .phone.front { right: 40px; top: 20px; }
+      .phone.back { right: 300px; top: 90px; }
+      .back-label { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="poster">
+    <section class="copy">
+      <div class="eyebrow"><i></i> Android app · Kotlin · Jetpack Compose</div>
+      <div class="brand">
+        <div class="mark" aria-hidden="true">
+          <svg viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FFF6E8" d="M22 33c11-4.5 23-4 32 1v45c-9-5-21-5.5-32-1Z"/>
+            <path fill="#F3E4CE" d="M86 33c-11-4.5-23-4-32 1v45c9-5 21-5.5 32-1Z"/>
+            <path fill="#C9A26A" d="M52.5 34h3v46h-3z"/>
+            <path fill="#E0A458" d="M68 47c5 0 8 4 8 9s-4 8-8 8c-3 0-5-2-5-4.5s2-4.5 4.5-4.5 3.5 1.5 3.5 3.5c0 1.5-1 2.5-2.5 2.5" stroke="#E0A458" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="70.4" cy="52.4" r="1.2" fill="#2B2520"/>
+          </svg>
+        </div>
+        <h1>Book-O-Worm</h1>
+      </div>
+      <p class="lead">Your bookshelf, photographed and searchable. Scan an ISBN barcode, pull the metadata automatically, and keep every PDF or EPUB on your own device.</p>
+      <ul class="features">
+        <li><span class="tick">✓</span><span>On-device EAN-13 barcode scan plus OCR fallback for the ISBN.</span></li>
+        <li><span class="tick">✓</span><span>Open Library autofill for title, authors, publisher, pages, subjects, and covers.</span></li>
+        <li><span class="tick">✓</span><span>Multi-category filters, duplicate-ISBN guard, ratings, and CSV export.</span></li>
+        <li><span class="tick">✓</span><span>Private local storage, offline ZIP backup, and “open with” any reader app.</span></li>
+      </ul>
+      <div class="stack">
+        <span>Kotlin</span><span>Jetpack Compose</span><span>Room</span><span>ML Kit</span><span>Open Library</span><span>Coil</span>
+      </div>
+      <div class="footnote"><b>Private project</b> · All rights reserved · Mockup UI with dummy data</div>
+    </section>
+    <section class="devices" aria-label="Book-O-Worm app screens">
+      <div class="glow"></div>
+      <div class="phone back" aria-label="Add book screen">
+        <div class="screen">
+          <div class="formbar"><span class="arrow">←</span> Add Book</div>
+          <div class="form">
+            <h2>Book Photos</h2>
+            <div class="photo-row">
+              <div class="photo-box">Front</div><div class="photo-box">Back</div><div class="photo-box">ISBN</div>
+            </div>
+            <h2>Find Book Data</h2>
+            <div class="isbn-row"><div class="field">978-0-7352-1129-2</div><div class="searchbtn">Search</div></div>
+            <h2>Book Information</h2>
+            <div class="field">Atomic Habits</div>
+            <div class="field">James Clear</div>
+            <div class="field-row"><div class="field">Price</div><div class="field">4.2 / 5</div></div>
+            <h2>Categories</h2>
+            <div class="field" style="height:35px">Self Development, Psychology, Neuroscience</div>
+            <div class="field">Rating · 4.2 / 5</div>
+          </div>
+          <button class="save">Save Book</button>
+        </div>
+      </div>
+      <div class="phone front" aria-label="Bookshelf screen">
+        <div class="screen">
+          <div class="status"><span>9:41</span><span class="dots"><i></i><i></i><i></i><span class="battery"></span></span></div>
+          <div class="appbar">
+            <span class="logo">
+              <svg viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#FFF6E8" d="M22 33c11-4.5 23-4 32 1v45c-9-5-21-5.5-32-1Z"/>
+                <path fill="#F3E4CE" d="M86 33c-11-4.5-23-4-32 1v45c9-5 21-5.5 32-1Z"/>
+                <path fill="#C9A26A" d="M52.5 34h3v46h-3z"/>
+                <path fill="#E0A458" d="M68 47c5 0 8 4 8 9s-4 8-8 8c-3 0-5-2-5-4.5s2-4.5 4.5-4.5 3.5 1.5 3.5 3.5c0 1.5-1 2.5-2.5 2.5" stroke="#E0A458" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="name">Book-O-Worm</span>
+            <span class="icons">文 ↻ ↓</span>
+          </div>
+          <div class="search"><span class="lens">⌕</span> Search title, author, or ISBN…</div>
+          <div class="chips"><span class="chip on">All</span><span class="chip">Self Development</span><span class="chip">Psychology</span><span class="chip">Neuroscience</span></div>
+          <div class="count">2 books found</div>
+          <div class="book">
+            <div class="top">
+              <div class="cover a">A</div>
+              <div class="meta">
+                <div class="rowline"><span class="lbl">Title:</span><span class="val big">Atomic Habits</span></div>
+                <div class="rowline"><span class="lbl">Author:</span><span class="val">James Clear</span></div>
+                <div class="rowline"><span class="lbl">Category:</span><span class="val">Self Development</span></div>
+                <div class="rowline"><span class="lbl">Price:</span><span class="val">Rp 120.000</span></div>
+                <div class="rowline"><span class="lbl">Rating:</span><span class="val">4.2 / 5</span></div>
+              </div>
+            </div>
+            <div class="actions"><span>Edit</span><span>Details</span><span class="del">Delete</span></div>
+            <button class="open">Open Book</button>
+          </div>
+          <div class="book">
+            <div class="top">
+              <div class="cover b">B</div>
+              <div class="meta">
+                <div class="rowline"><span class="lbl">Title:</span><span class="val big">The Body Keeps the Score</span></div>
+                <div class="rowline"><span class="lbl">Author:</span><span class="val">Bessel van der Kolk</span></div>
+                <div class="rowline"><span class="lbl">Category:</span><span class="val">Psychology</span></div>
+                <div class="rowline"><span class="lbl">Price:</span><span class="val">—</span></div>
+                <div class="rowline"><span class="lbl">Rating:</span><span class="val">4.6 / 5</span></div>
+              </div>
+            </div>
+            <div class="actions"><span>Edit</span><span>Details</span><span class="del">Delete</span></div>
+            <button class="open muted">Upload file to open</button>
+          </div>
+          <div class="fab">+ Add Book</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Lock } from "lucide-react";
 import { projects } from "../data/projects";
 
 export default function Projects() {
@@ -58,7 +58,7 @@ export default function Projects() {
                 flexDirection: "column",
               }}
             >
-              <a href={base + p.demo} target="_blank" rel="noreferrer" style={{ display: "block" }}>
+              <a href={base + p.demo!} target="_blank" rel="noreferrer" style={{ display: "block" }}>
                 <img
                   src={base + p.shot}
                   alt={`${p.title} screenshot`}
@@ -136,12 +136,22 @@ export default function Projects() {
                     gap: 8,
                   }}
                 >
-                  <a href={base + p.demo} target="_blank" rel="noreferrer" className="btn sm">
+                  <a href={base + p.demo!} target="_blank" rel="noreferrer" className="btn sm">
                     <ExternalLink size={14} /> Live Demo
                   </a>
-                  <a href={p.github} target="_blank" rel="noreferrer" className="btn sm">
-                    <Github size={14} /> Source
-                  </a>
+                  {p.github ? (
+                    <a href={p.github} target="_blank" rel="noreferrer" className="btn sm">
+                      <Github size={14} /> Source
+                    </a>
+                  ) : p.isPrivate ? (
+                    <span
+                      className="btn sm"
+                      style={{ cursor: "default", color: "var(--muted)" }}
+                      title="Source code is private"
+                    >
+                      <Lock size={14} /> Private source
+                    </span>
+                  ) : null}
                 </div>
               </div>
             </motion.article>
